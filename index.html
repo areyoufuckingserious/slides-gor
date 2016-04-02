@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Gor 101</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="Crell">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+
+      blockquote.dialog {
+        white-space: pre-line;
+        text-align: left;
+        width: 100%;
+        line-height: 1.5em;
+      }
+
+      .reveal h3,
+      .reveal h4,
+      .reveal h5 {
+        text-transform: none;
+      }
+
+      p.bigtext {
+        font-size: 150%;
+      }
+
+      .reveal section img {
+        margin: 15px 0px;
+        background: none;
+        border: 0;
+        box-shadow: none;
+      }
+
+      /* line 201, ../sass/_theme.scss */
+      .reveal q:before {
+        content: '\201C';
+      }
+      /* line 205, ../sass/_theme.scss */
+      .reveal q:after {
+        content: '\201D';
+      }
+
+      /* line 52, ../sass/_general.scss */
+      .l-2up > div {
+        margin-bottom: 15px;
+      }
+      @media (min-width: 600px) {
+        /* line 52, ../sass/_general.scss */
+        .l-2up > div {
+          width: 48%;
+          margin-bottom: 0;
+          text-align: left;
+          float: left;
+          font-size: 0.85em;
+        }
+        /* line 61, ../sass/_general.scss */
+        .l-2up > div:nth-of-type(1n) {
+          padding-right: 2%;
+          padding-left: 0;
+        }
+        /* line 66, ../sass/_general.scss */
+        .l-2up > div:nth-of-type(2n) {
+          padding-right: 0;
+          padding-left: 2%;
+        }
+      }
+
+      /* line 73, ../sass/_general.scss */
+      .l-3up > div {
+        margin-bottom: 15px;
+      }
+      @media (min-width: 750px) {
+        /* line 73, ../sass/_general.scss */
+        .l-3up > div {
+          width: 31%;
+          margin-bottom: 0;
+          text-align: left;
+          float: left;
+          font-size: 0.7em;
+        }
+        /* line 83, ../sass/_general.scss */
+        .l-3up > div:nth-of-type(1n) {
+          padding-right: 2%;
+          padding-left: 0;
+        }
+        /* line 88, ../sass/_general.scss */
+        .l-3up > div:nth-of-type(2n) {
+          padding-right: 1%;
+          padding-left: 1%;
+        }
+        /* line 93, ../sass/_general.scss */
+        .l-3up > div:nth-of-type(3n) {
+          padding-right: 0;
+          padding-left: 2%;
+        }
+      }
+
+      /* line 100, ../sass/_general.scss */
+      .l-4up > div {
+        margin-bottom: 15px;
+      }
+      @media (min-width: 900px) {
+        /* line 100, ../sass/_general.scss */
+        .l-4up > div {
+          width: 23%;
+          margin-bottom: 0;
+          text-align: left;
+          float: left;
+          font-size: 0.5em;
+        }
+        /* line 110, ../sass/_general.scss */
+        .l-4up > div:nth-of-type(1n) {
+          padding-right: 2%;
+          padding-left: 0;
+        }
+        /* line 115, ../sass/_general.scss */
+        .l-4up > div:nth-of-type(2n) {
+          padding-right: 1%;
+          padding-left: 1%;
+        }
+        /* line 120, ../sass/_general.scss */
+        .l-4up > div:nth-of-type(3n) {
+          padding-right: 1%;
+          padding-left: 1%;
+        }
+        /* line 125, ../sass/_general.scss */
+        .l-4up > div:nth-of-type(4n) {
+          padding-right: 0;
+          padding-left: 2%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>What is Gor?</h1>
+        </section>
+        <section>
+          <section>
+            <blockquote>The end of the institution of marriage is a necessary condition for the liberation of women.</blockquote>
+            <p>"The Declaration of Feminism," November 1971</p>
+          </section>
+          <section>
+            <blockquote>Since marriage constitutes slavery for women, it is clear that the women's movement must concentrate on attacking this institution. Freedom for women cannot be won without the abolition of marriage.</blockquote>
+            <p>radical feminist leader Sheila Cronan</p>
+          </section>
+          <section>
+            <blockquote>The institution of sexual intercourse is anti-feminist</blockquote>
+            <p>Ti-Grace Atkinson "Amazon Odyssey" (p. 86), 1974</p>
+          </section>
+          <section>
+            <blockquote>Being a housewife is an illegitimate profession... The choice to serve and be protected and plan towards being a family-maker is a choice that shouldn't be. The heart of radical feminism is to change that.</blockquote>
+            <p>Vivian Gornick, feminist author, University of Illinois, "The Daily Illini," April 25, 1981</p>
+          </section>
+          <section>
+            <p>Welcome to Radical Feminism&trade;</p>
+            <aside class="notes">
+              <ul>
+                <li>Ascendent in late 1960s</li>
+                <li>Only got stronger over time</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>John F. Lange, Jr.</h2>
+            <h3>aka John Norman</h3>
+            <div class="l-2up">
+              <div>
+                <ul>
+                  <li>Born Chicago, 1931</li>
+                  <li>Philosophy Prof, Queens College, CUNY</li>
+                  <li>Naturalist philosophy</li>
+                  <li>Inspired by Nietzsche</li>
+                </ul>
+              </div>
+              <div><img src="assets/john-norman.jpg" /></div>
+            </div>
+          </section>
+          <section>
+            <h2>Tarnsman of Gor</h2>
+            <div class="l-2up">
+              <div>
+                <ul>
+                  <li>First published 1966</li>
+                  <li>25 books by 1988, now 33</li>
+                  <li>12 million copies sold</li>
+                  <li>Argument by hyperbole</li>
+                </ul>
+              </div>
+              <div><img src="assets/cover-tarnsman-original.jpg" /></div>
+            </div>
+            <aside class="notes">
+              <ul>
+                <li>Response to rising feminist movement</li>
+                <li>Satirize radical feminist dogma, flip it</li>
+                <li>Blacklisted 1988, found new publisher 2001</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Gor</h2>
+            <ul>
+              <li class="fragment">Sword-and-sandal Sci-Fi romance</li>
+              <li class="fragment">Counter-Earth</li>
+              <li class="fragment">Human transplants</li>
+              <li class="fragment">Technology supressed</li>
+              <li class="fragment">Many caricature cultures</li>
+            </ul>
+            <aside class="notes">
+              <ul>
+                <li>Main area is Greco-Roman, also Arabian, Indian, Pre-colonial Africa, etc.</li>
+                <li>Low-tech = more "natural" culture/lifestyle</li>
+                <li>Similar cultural backbone</li>
+                <li>Profession-based casts</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Tarl Cabot</h2>
+            <aside class="notes">
+              <ul>
+                <li>Englishman transplanted to Gor</li>
+                <li>Gets into adventures/trouble across the world</li>
+                <li>Other earth-borns (mostly women) show up at various times</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Goals of Gor</h2>
+            <ol>
+              <li class="fragment">Espouse a sociological belief</li>
+              <li class="fragment">Create a world in which to play</li>
+              <li class="fragment">Sell lots of copies, make lots of money</li>
+            </ol>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Gorean Philosophy</h2>
+            <h3 class="fragment">(Crell edition)</h3>
+            <aside class="notes">
+              <ul>
+                <li>Many differing interpretations, similar base</li>
+                <li>This is my understanding</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Honor</h2>
+            <aside class="notes">
+              <ul>
+                <li>Right and Wrong</li>
+                <li>Personal responsibility, accountability</li>
+                <li>Accept consequences of your actions</li>
+                <li>Answerable to the person in the mirror</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <blockquote class="dialog">"Flee," she said.
+              "I am of the Warriors," I said.
+              "But you may die," she said.
+              "That is acknowledged in the codes," I said.
+              ...
+              "None would know if you betrayed the codes," she said.
+              "I would know," I said, "and I am of the Warriors."
+            </blockquote>
+            <p>&mdash;<em>Beasts of Gor</em>, Page 340</p>
+          </section>
+          <section>
+            <blockquote>The morality of slaves says, "You are equal to me; we are both the same"; the morality of masters says, "We are not equal; we are not the same; become equal to me; then we will be the same."</blockquote>
+            <p>&mdash;<em>Marauders of Gor</em>, Page 9</p>
+          </section>
+          <section>
+            <blockquote>Do not ask the stones or the trees how to live, they can not tell you;... do not ask how to live, but, instead, proceed to do so.</blockquote>
+            <p>&mdash;<em>Marauders of Gor</em>, Page 9</p>
+          </section>
+          <section>
+            <h2>Community</h2>
+            <ul>
+              <li class="fragment">Caste solidarity</li>
+              <li class="fragment">Home Stone</li>
+            </ul>
+            <aside class="notes">
+              <ul>
+                <li>Rock, means nothing, everything</li>
+                <li>Focal point of community</li>
+                <li>More than patriotism</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Natural Order</h2>
+            <p class="fragment">Gor is a proudly male-dominant culture</p>
+            <p class="fragment">Including female slavery</p>
+          </section>
+          <section>
+            <h3>Evolutionary Psychology</h3>
+            <aside class="notes">
+              <ul>
+                <li>Males dominant, females submissive (tendency)</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h3>Female slavery</h3>
+            <p class="fragment">2% of females on Gor are slaves</p>
+            <p class="fragment">90% of characters are :-)</p>
+            <aside class="notes">
+              <ul>
+                <li>Slavery is an edge case</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Data?</h2>
+            <ul>
+              <li>Joyal, C.C., Cossette, A., & Alpierre, V. (in press). <em>"What exactly is an unusual sexual fantasy?"</em> The Journal of Sexual Medicine.</li>
+              <li>cf, <a href="http://www.lehmiller.com/blog/2014/11/12/how-common-are-bdsm-fantasies-infographic">Sex and Psychology</a></li>
+              <li>1,516 Canadian Adults, 18-27</li>
+            </ul>
+          </section>
+          <section class="l-2up">
+            <div><img src="assets/bdsm-fantasies/dominating-female.png" /></div>
+            <div><img src="assets/bdsm-fantasies/dominating-male.png" /></div>
+          </section>
+          <section class="l-2up">
+            <div><img src="assets/bdsm-fantasies/dominated-female.png" /></div>
+            <div><img src="assets/bdsm-fantasies/dominated-male.png" /></div>
+          </section>
+          <section class="l-2up">
+            <div><img src="assets/bdsm-fantasies/tyingup-female.png" /></div>
+            <div><img src="assets/bdsm-fantasies/tyingup-male.png" /></div>
+          </section>
+          <section class="l-2up">
+            <div><img src="assets/bdsm-fantasies/tiedup-female.png" /></div>
+            <div><img src="assets/bdsm-fantasies/tiedup-male.png" /></div>
+          </section>
+          <section class="l-2up">
+            <div><img src="assets/bdsm-fantasies/whipping-female.png" /></div>
+            <div><img src="assets/bdsm-fantasies/whipping-male.png" /></div>
+          </section>
+          <section class="l-2up">
+            <div><img src="assets/bdsm-fantasies/whipped-female.png" /></div>
+            <div><img src="assets/bdsm-fantasies/whipped-male.png" /></div>
+          </section>
+          <section>
+            <p class="bigtext">"Shifted bell curve"</p>
+            <img src="assets/shifted-bell-curve.gif" alt="Shifted Bell Curve" data-credit="https://controls.engin.umich.edu/wiki/index.php/File:Change-mean-of-data-set.gif" />
+        </section>
+        </section>
+        <section>
+          <section>
+            <h2>The Gorean Community</h2>
+            <aside class="notes">
+              <ul>
+                <li>Books blacklisted 1988</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <q>Quick, to the Internet!</q>
+          </section>
+          <section>
+            <h2>Silk &amp; Steel</h2>
+            <h3>1996</h3>
+            <aside class="notes">
+              <ul>
+                <li>Founders: Bear, Marcus, and Zeb</li>
+                <li>IRC channel, grew. Has Home Stone</li>
+                <li>Other groupcs mimicked, had more RP.</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Role Play Gor (RPG)</h2>
+            <aside class="notes">
+              <ul>
+                <li>Online RP</li>
+                <li>Many took RP offline to their lives</li>
+                <li>IRC, AOL, now Second Life</li>
+                <li>Some contention, I don't care if you're honest.</li>
+                <li>Where is line from RP to actually living?</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Schools of Gor</h2>
+            <ul>
+              <li>Simulation</li>
+              <li>Emulation</li>
+              <li>Inspiration</li>
+              <li>Justification</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Simulation</h2>
+            <aside class="notes">
+              <ul>
+                <li>Simulate Gor (online?). Like Star Trek RPG.</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Emulation</h2>
+            <aside class="notes">
+              <ul>
+                <li>Don't act like characters, BE like characters</li>
+                <li>"Advanced RP"</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Inspiration</h2>
+            <aside class="notes">
+              <ul>
+                <li>Learn from. Build sense of honor</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Justification</h2>
+            <aside class="notes">
+              <ul>
+                <li>I'm not alone; it's OK to be this way</li>
+                <li>It's OK to not conform to modern society, Social Justice Movement</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <p class="bigtext">All have potential for<br />good and evil</p>
+            <aside class="notes">
+              <ul>
+                <li>Simulation: Modeling without being is fraud</li>
+                <li>Emulation: We have Internet</li>
+                <li>Inspiration: Follow bad examples from the books</li>
+                <li>Justification: Good cover for misogynist asshats</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>The Story of Crell</h2>
+            <img class="fragment" src="assets/gophp5_logo.png" alt="The GoPHP5 Project" />
+          </section>
+          <section>
+            <blockquote>"Within the circle of each man's sword, therein is each man a Ubar".</blockquote>
+            <p>&mdash;<em>Marauders of Gor</em>, Page 10</p>
+            <aside class="notes">
+              <ul>
+                <li>Reach of sword</li>
+                <li>Collar</li>
+                <li>Reach of influence</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <p>Insert shayna here</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Gor and Kink</h2>
+            <h3>Clash of cultures</h3>
+            <aside class="notes">
+              <ul>
+                <li>People overlap, but not all</li>
+                <li>Kink: Fun with nervous system</li>
+                <li>Kink: Do whatever if SSC/RACK</li>
+                <li>Gor: Self-focused. Not about sex.</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <p class="bigtext">Gor is not inherently misogynist.</p>
+            <p class="bigtext fragment">It is inherently sexist.</p>
+            <p class="bigtext fragment">(Differentiates on the basis of sex.)</p>
+            <aside class="notes">
+              <ul>
+                <li>Free Women are still in a man's world</li>
+                <li>Male slaves discouraged</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Slavery of Gor</h3>
+            <ul>
+              <li class="fragment">Free: Goreans</li>
+              <li class="fragment">slaves: Surrendered mindset</li>
+              <li class="fragment">Unowned slaves: Marketing</li>
+            </ul>
+          </section>
+          <section>
+            <h3>The Vector of Pleasure</h3>
+            <p>&mdash;Zeb of Silk &amp; Steel</p>
+          </section>
+          <section>
+            <p><q>A slave's purpose in life is to<br />make her master's life more pleasant.</q></p>
+            <p class="fragment">Everything else is an implementation detail</p>
+            <aside class="notes">
+              <ul>
+                <li>Details vary widely</li>
+                <li>Not about the slave, or sex</li>
+                <li>More shayna</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <q>I may be a slave but I'm not your slave [so piss off].</q>
+            <p class="fragment" style="margin-top: 1em">Gorean slaves are always slaves</p>
+            <aside class="notes">
+              <ul>
+                <li>Slavery is mind-set, not role play</li>
+                <li>Can't "safeword" who you are, or a relationship.</li>
+                <li>Not sex; of service to all</li>
+                <li>Address all Free as Master/Mistress</li>
+                <li>More shayna</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <q>So are Gorean slaves doormats?</q>
+            <div class="fragment">
+              <blockquote class="dialog">’Vella,’ said I, ‘is a highly intelligent, complex woman.’
+                ‘Such make the best slaves,’ said Ibn Saran.
+                ‘True,’ I said. Indeed, who would want to collar any other sort of woman? To take the most brilliant, the most imaginative, the most beautiful women, and put them at your feet, impassioned, helpless slaves is victory.”
+              </blockquote>
+              <p>&mdash;<em>Tribesmen of Gor</em>, page 127-128</p>
+            </div>
+            <aside class="notes">
+              <ul>
+                <li>FINISH WATER</li>
+                <li>Intelligence valuable</li>
+                <li>Smart women easier to train</li>
+                <li>Smart women self-train</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h3>Serves</h3>
+            <aside class="notes">
+              <ul>
+                <li>Some ritual from the books</li>
+                <li>Mostly online-isms</li>
+                <li>You just saw one</li>
+                <li>Shayna demos formal serve</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h3>Positions</h3>
+            <aside class="notes">
+              30-ish from the books, RPers invented a few more
+              <ul>
+                <li>Nadu</li>
+                <li>Tower</li>
+                <li>Display</li>
+                <li>Bracelets</li>
+                <li>Bara</li>
+                <li>Submission</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>The Global Community</h2>
+            <aside class="notes">
+              <ul>
+                <li>Fans: Hundreds of thousands</li>
+                <li>RPers: Tens of thousands</li>
+                <li>Lifestyler-ish: Thousands</li>
+                <li>Active lifestyle: Hundreds</li>
+                <li>2/3 females self-identify as slaves</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Chicago</h2>
+            <img src="assets/home-stone.jpg" alt="The Home Stone of Chicago" />
+            <aside class="notes">
+              <ul>
+                <li>Home Stone</li>
+                <li>Founded July 1st 2012</li>
+                <li>5 citizens - about them</li>
+                <li>Monthly meetings, open, educational</li>
+                <li>We don't bite unless you're cute</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+        <section>
+          <h1>?</h1>
+        </section>
+
+
+      </div>
+
+      <div style="display: none">
+
+        - Feminism of the 60s
+        - Early history of authorship (argument by hyperbole, backlash)
+        - Setting and plot (ish)
+        - Key tenants (editorial warning)
+        -- (Honor, community/Home Stone, Responsibility, male leadership)
+        -- "Come up to my level, then we will be equal"
+        -- "I would know"
+        -- "Do not ask the rocks and trees how to live"
+        - Arguments
+        -- Evoluationary psychology
+        -- Shifted bell curves
+        -- Survey data from Psychology of Sex...
+        - Community
+        -- Little pre-Internet
+        -- Silk & Steel, circa 1996?
+        -- RP
+        - Schools of Gor
+        -- Simulation
+        -- Emulation
+        -- Inspiration
+        -- Justification
+        -- All can be good or bad
+        - Not part of BDSM, although obvious overlap
+        - 2001: The Crell
+        - shayna: The movie
+        - Culture
+        -- (Water)
+        -- "Free" vs unowned slave vs slave
+        -- "Master" and service to al
+        - Slave's POV (shayna)
+        - More culture
+        -- 3rd person
+        -- "Serves"
+        -- Formal serve
+        -- Poses (nadu, tower, display, bracelets, bara, submission)
+        - Chicago Gor - 2012
+        -- Home Stone
+        -- 5 citizens, including 2.5 expats. :-(
+        --
+
+
+
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
